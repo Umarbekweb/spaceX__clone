@@ -1,0 +1,100 @@
+section {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.b1 {
+    background-image: url(/assets/img/homepage.webp);
+}
+
+.b2 {
+    background-image: url(/assets/img/first__image.webp);
+}
+
+.b3 {
+    background-image: url(/assets/img/second_image.webp);
+}
+
+.b4 {
+    background-image: url(/assets/img/third__image.webp);
+}
+
+.b5 {
+    background-image: url(/assets/img/forth__image.webp);
+}
+
+.b6 {
+    background-image: url(/assets/img/fifth__image.webp);
+}
+
+.main__content {
+    width: 100%;
+    @include respond(mobile) {
+        padding-top: 25rem;
+    }
+    @include respond(tab-por) {
+        width: 50%;
+    }
+    color: $mainColor;
+    padding-left: 5rem;
+    .content__text {
+        font-size: 1rem;
+        @include respond(tab-por) {
+            font-size: 2rem;
+        }
+        @include respond(tab-land) {
+            font-size: 3rem;
+        }
+    }
+    .content__title {
+        @include respond(tab-por) {
+            font-size: 4rem;
+            margin-bottom: 4rem;
+        }
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+    }
+    .content__btn {
+        a {
+            padding: 1rem 1.4rem;
+            @include respond(tab-por) {
+                padding: 1.8rem 3rem;
+            }
+            line-height: 40px;
+            font-size: 1.6rem;
+            font-weight: 600;
+            font-family: sans-serif;
+            text-decoration: none;
+            color: $mainColor;
+            border: 2px solid $mainColor;
+            letter-spacing: 0.2px;
+            text-align: center;
+            position: relative;
+            transition: all .35s;
+            span {
+                position: relative;
+                z-index: 2;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 0;
+                background: $mainColor;
+                transition: all .35s;
+            }
+            &:hover {
+                color: #000;
+            }
+            &:hover:after {
+                height: 100%;
+            }
+        }
+    }
+}
